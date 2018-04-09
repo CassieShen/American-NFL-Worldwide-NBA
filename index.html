@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- 引入 ECharts 文件 -->
+	<script src="echarts.min.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<style>
+		#scatter div {
+			width: 1000px!important;
+		}
+	</style>
+</head>
+<body>
+
+	<body style="width:1000px;margin:0 auto;">
+		<a href="#title" style="position:fixed;bottom:10px;margin-left:1020px;">Back to top</a>
+		<div style="text-align:center;line-height:100px;width:100%;font-size:58px;" id="title">American NFL, Worldwide NBA</div>
+		<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">The 90th Oscars (the 90th Academy Awards ceremony) was held on last Sunday, 4th March. For each year, Oscars always draws much public attentions and raises a series of controversies due to its great influence in film industry. Last year, Oscars finally got rid of the label "Oscars is too white", but for this year it comes to the issue "Women must occupy half the sky". By searching tweets related to the hashtag #Oscars, it could give an overview of the public reflection to Oscars and what relevant issues do people concern. </div>
+
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+		<div id="myTabs">
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Top10 Mentioned and Relevant Hashtags</a></li>
+				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">SentimentScore & #Metoo Campaign</a></li>
+				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Conclusion</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
+					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">Top10 Mentioned and Relevant Hashtags</div>
+
+					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">Oscars--Top10 Mentioned ID & Relevant Hashtag</div>
+          <script id="infogram_0_83f8ecf2-2d6e-4d66-b3ca-0fd75e4daa76" title="" src="https://e.infogram.com/js/dist/embed.js?r1R" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+
+					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">GoldenGlobes--Top10 Mentioned ID & Relevant Hashtag</div>
+					<script id="infogram_0_7dd9f972-7a64-4671-b86b-088ed703d513" title="" src="https://e.infogram.com/js/dist/embed.js?X7y" type="text/javascript"></script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+
+					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">A. Top10 Mentioned Account</div>
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Golden Globe Awards which recognizes excellence in film and television also has considerate influence and is known as the wind vane of Oscars to some degree. Comparing tweets with hashtag #Oscars and #GoldenGlobes respectively, it is clear that tweets with Oscars are more often mentioned by single twitter accounts, with most mentioned by Jimmy Kimmel of 107 times while for #GoldenGlobes only 11. The huge gap between these two mention times illustrates that Oscars draws more reflection from a single twitter user. Considering the Top 10 mentioned id, the #Oscars tends to be mentioned more by public account while #GoldenGlobes seems to appear more in individual accounts like some actors and actresses. It is also interesting to note that the president Donald Trump’s account appears on both of these top10 list and it even ranks the third in #Oscars list.</div>
+
+					<div style="text-align:left;line-height:50px;width:100%;font-size:22px;">B. Top10 Relevant Hashtag</div>
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">After removing the hashtags #Oscars and #GoldenGlobes themselves, the two yellow bar charts above show the top 10 relevant hashtags. It is easy to find that the mostly appeared hashtags of GoldenGlobes are related to Oscars with hashtags #Oscars, #Oscars2018 and #Oscars90 in the list. For Oscars’ relevant list, hashtag #Metoo Stands out except the issues related to films such as movie and role. The #InternationalWomensDay also appears frequently due to the date itself. This can be explained by the impact of Metoo Campaign started last October. During the Oscars ceremony, many actresses and cineastes supported the MeToo Campaign and argued for women’s right. By raising the MeToo hashtag, lots of users responded to the campaign, which also shows the public request on Oscars for more women.</div>
+
+
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
+					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">SentimentScore & #Metoo Campaign</div>
+
+					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">Sentiment Analytics of Different Hashtags </div>
+          <div class="infogram-embed" data-id="6e3a038d-d393-49b2-8d75-bfee5d4940e3" data-type="interactive" data-title=""></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t)[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=d+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var a=e.createElement(t);a.async=1,a.id=n,a.src=s,o.parentNode.insertBefore(a,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Comparing the sentimental terms related to #Oscars and #GoldenGlobes, the GoldenGlobes wins higher sentiment score with larger percentage of positive terms. For #Oscars itself, texts with positive terms also account for the majority with more than 70%. However, when considering both #Oscars and #Metoo within a same text, the sentiment score drops to lower than 0.2 with more than 40% negative terms. </div>
+
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">On the whole, Oscars receives positive public reflection, while combined with Metoo, the situation changes. All kinds of speeches at this year's award ceremony won nearly 100% of the audience's approval. While Emma Stone, who presented the best director award, seemed to have made a mistake and attracted many Internet users. When introducing the list of candidates, Stone said the phrase “This year's creation of masterpieces and the four men who were nominated, plus a Greta Grevegue” seemed to be a rare actress with female directors, this made some internet users label her as "white feminist". The black and Latino groups also have pointed out that Emma Stone has only men and women in her eyes but forgot other vulnerable groups that lack the right to speak in Hollywood. </div>
+
+
+
+
+				</div>
+				<div role="tabpanel" class="tab-pane" id="messages" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
+					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">Conclusion</div>
+
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Compared to GoldenGlobes, Oscars draws more negative comments in social media, especially when connecting to political issues. Sentimental opinions towards Oscars are not only for the award itself but for the concept known as “political correctness”.</div>
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">With both recognition and sniff of political correctness, Oscars receives various controversies. Every year, Oscars could not get rid of those political issues that being highly debated and negative comments on related political issues would never disappear.</div>
+
+
+									</div>
+								</div>
+
+							</div>
+							<script>
+										$('#myTabs a').click(function (e) {
+											e.preventDefault()
+											$(this).tab('show')
+										})
+							</script>
+
+			<div style="text-align:right;line-height:25px;width:100%;margin:10px 0;font-size:16px;">By Cassie Shen Yue</div>
+
+
+
+</body>
+
+</html>
