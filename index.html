@@ -7,7 +7,8 @@
 	<script src="echarts.min.js"></script>
 	<script src="jquery-3.2.1.min.js"></script>
 	<script src="bootstrap.min.js"></script>
-	<link rel="stylesheet" href="bootstrap.min.css" />
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css" />
 	<style>
 		#scatter div {
 			width: 1000px!important;
@@ -48,6 +49,53 @@
           <div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">After comparing the frequency of their names being mentioned by New York Times (NYT) in the past 20 years, it is clear that NFL has always got more hits in NYT articles than NBA, which means the American coverages also focus more on NFL.</div>
           <div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:24px;">Two Major American Sports Leagues' Names Mentioned in New York Times (1997-2017)</div>
           <script src="Two Major American Sports Leagues' Names Mentioned in New York Times (1997-2017).js"></script>
+
+					<!-- Plotly chart will be drawn inside this div -->
+				  <div id="plotly-div"></div>
+					<script>
+					trace1 = {
+					  x: [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+					  y: [57, 33, 50, 65, 85, 73, 74, 73, 68, 211, 220, 325, 398, 353, 450, 389, 172, 178, 163, 768, 83],
+					  line: {color: 'rgba(31,119,180,1)'},
+					  mode: 'lines',
+					  name: 'NFL',
+					  type: 'scatter',
+					  xaxis: 'x',
+					  xsrc: 'Cassie_shen:4:f6f58e',
+					  yaxis: 'y',
+					  ysrc: 'Cassie_shen:4:4a3f61'
+					};
+					trace2 = {
+					  x: [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+					  y: [37, 29, 58, 65, 73, 60, 49, 57, 60, 101, 77, 107, 84, 89, 93, 100, 57, 64, 90, 380, 47],
+					  line: {color: 'rgba(255,127,14,1)'},
+					  mode: 'lines',
+					  name: 'NBA',
+					  type: 'scatter',
+					  xaxis: 'x',
+					  xsrc: 'Cassie_shen:4:02a218',
+					  yaxis: 'y',
+					  ysrc: 'Cassie_shen:4:4dee39'
+					};
+					data = [trace1, trace2];
+					layout = {
+					  hovermode: 'closest',
+					  margin: {
+					    r: 10,
+					    t: 25,
+					    b: 40,
+					    l: 60
+					  },
+					  showlegend: true,
+					  xaxis: {domain: [0, 1]},
+					  yaxis: {domain: [0, 1]}
+					};
+					Plotly.plot('plotly-div', {
+					  data: data,
+					  layout: layout
+					});
+          </script>
+
 					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Before 2005, it seemed that NFL and NBA shared similar hits in NYT. After that NFL’ figure experienced remarkable increase until 2014, while NBA was always remained around 100 with slight fluctuation. Both of NFL and NBA hits went through a decrease in 2013 but saw a dramatic climb in 2016, although the figure of NFL was still nearly double of the NBA’s. The reasons for both league’s hits achieved the peak might be various. As for the 2016 NFL season, neither of the previous season's Super Bowl participants made the playoffs, which was unexpected at that moment. On the other hand, in the 2016 NBA Finals, the Cleveland Cavaliers defeated the Golden State Warriors with 4:3 after trailing three games to one, which was the first time in finals history with such reversion and was widely reported then. </div>
 
 
