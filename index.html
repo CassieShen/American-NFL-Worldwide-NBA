@@ -97,16 +97,100 @@
           </script>
 
 					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Before 2005, it seemed that NFL and NBA shared similar hits in NYT. After that NFL’ figure experienced remarkable increase until 2014, while NBA was always remained around 100 with slight fluctuation. Both of NFL and NBA hits went through a decrease in 2013 but saw a dramatic climb in 2016, although the figure of NFL was still nearly double of the NBA’s. The reasons for both league’s hits achieved the peak might be various. As for the 2016 NFL season, neither of the previous season's Super Bowl participants made the playoffs, which was unexpected at that moment. On the other hand, in the 2016 NBA Finals, the Cleveland Cavaliers defeated the Golden State Warriors with 4:3 after trailing three games to one, which was the first time in finals history with such reversion and was widely reported then. </div>
+          <div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">The hits in NYT showed the American media attention on major leagues and also confirmed more focus on NFL than NBA through the American version. There is no doubt that NFL is the number one league game to watch for Americans but NBA could be more worldwide popular. </div>
 
 
 				</div>
 				<div role="tabpanel" class="tab-pane" id="profile" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
 					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">Social Media Statistics</div>
 
-          <div class="infogram-embed" data-id="6e3a038d-d393-49b2-8d75-bfee5d4940e3" data-type="interactive" data-title=""></div><script>!function(e,t,n,s){var i="InfogramEmbeds",o=e.getElementsByTagName(t)[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(s)&&(s=d+s),window[i]&&window[i].initialized)window[i].process&&window[i].process();else if(!e.getElementById(n)){var a=e.createElement(t);a.async=1,a.id=n,a.src=s,o.parentNode.insertBefore(a,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+					<div id="bar" style="width: 100%;height:300px;"></div>
 
+					<script type="text/javascript">
+							// 基于准备好的dom，初始化echarts实例
+							var myChart = echarts.init(document.getElementById('bar'));
 
-					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">On the whole, Oscars receives positive public reflection, while combined with Metoo, the situation changes. All kinds of speeches at this year's award ceremony won nearly 100% of the audience's approval. While Emma Stone, who presented the best director award, seemed to have made a mistake and attracted many Internet users. When introducing the list of candidates, Stone said the phrase “This year's creation of masterpieces and the four men who were nominated, plus a Greta Grevegue” seemed to be a rare actress with female directors, this made some internet users label her as "white feminist". The black and Latino groups also have pointed out that Emma Stone has only men and women in her eyes but forgot other vulnerable groups that lack the right to speak in Hollywood. </div>
+					var seriesLabel = {
+					    normal: {
+					        show: true,
+					        textBorderColor: '#333',
+					        textBorderWidth: 4
+					    }
+					}
+
+					option = {
+					    title: {
+					        text: 'Social Media Statistics'
+					    },
+					    tooltip: {
+					        trigger: 'axis',
+					        axisPointer: {
+					            type: 'shadow'
+					        }
+					    },
+					    legend: {
+					        data: ['NFL', 'NBA' ]
+					    },
+					    grid: {
+					        left: 130
+					    },
+					    toolbox: {
+					        show: true,
+					        feature: {
+					            saveAsImage: {}
+					        }
+					    },
+					    xAxis: {
+					        type: 'value',
+					        axisLabel: {
+					            formatter: '{value}'
+					        }
+					    },
+					    yAxis: {
+					        type: 'category',
+					        inverse: true,
+					        data: ['Twitter Followers','Facebook Followers',  'Facebook Likes'],
+					        axisLabel: {
+					            margin: 10,
+					            rich: {
+					                TwitterFollowers: {
+					                    height: 40,
+					                    align: 'center',
+
+					                },
+					                FacebookFollowers: {
+					                    height: 40,
+					                    align: 'center',
+
+					                },
+					                FacebookLikes: {
+					                    height: 40,
+					                    align: 'center',
+
+					                }
+					            }
+					        }
+					    },
+					    series: [
+					        {
+					            name: 'NFL',
+					            type: 'bar',
+					            data: [24485245,17181742, 17000000],
+					            label: seriesLabel,
+					        },
+					        {
+					            name: 'NBA',
+					            type: 'bar',
+					            label: seriesLabel,
+					            data: [27279460, 34927343, 34000000]
+					        }
+					    ]
+					};
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+					</script>
+
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Considering the social media engagement, NBA account/page owns more followers than NFL on both Facebook and Twitter and also gains more likes. Compared to NYT, social media like could have a more worldwide version. With most users from India in Facebook, the number of NBA’s followers surpass double of the NFL’s. Although users from the United State rank the first in Twitter, NBA still wins more fans than NFL. More social media engagement reflects NBA’s worldwide influence to some degree.</div>
 
 
 
@@ -114,9 +198,10 @@
 				</div>
 				<div role="tabpanel" class="tab-pane" id="messages" style="padding-bottom: 15px;border-bottom: 2px solid gray;">
 					<div style="text-align:left;line-height:50px;width:100%;font-size:36px;">Related Hashtags</div>
+					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Hashtag can be an essential part of social media that shows the related topics of the post and can also help increase popularity. After calculating the latest posts with NFL and NBA hashtags respectively, other hashtags within these posts could also been illustrated.</div>
 					<p style="text-align: center; "><img src="./NFL_twitter hashtags-01.jpg" style="width: 100%; " /></p>
 					<p style="text-align: center; "><img src="./NBA_twitter hashtags-01.jpg" style="width: 100%; " /></p>
-					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;font-size:22px;">(Wordcloud made by: https://www.jasondavies.com/wordcloud/)</div>
+					<div style="text-align:center;line-height:50px;width:100%;margin:10px 0;">(Wordcloud made by: https://www.jasondavies.com/wordcloud/)</div>
 					<div style="text-align:left;line-height:25px;width:100%;margin:10px 0;">Putting all related hashtags into a wordcloud, it is clear to see the hot topics about NFL and NBA. For example, in the NFL wordcloud, “Superbowl” and championship participants “Eagles” and “Patriots” are more frequently mentioned. Also, “ESPN”, a sports television network that provides the Super Bowl live is repeatedly mentioned. “NBARegularSeason” is most mentioned in NBA related posts which reflects the latest trend of each game.</div>
 
 
